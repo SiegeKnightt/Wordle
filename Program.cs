@@ -64,6 +64,7 @@
                     Console.WriteLine("The word was: " + winningWord);
 
                     game = false;
+                    return;
                 }
                 
                 if (attempt == 5) {
@@ -72,6 +73,7 @@
                     Console.WriteLine("The word was: " + winningWord);
 
                     game = false;
+                    return;
                 }
 
                 attempt++;

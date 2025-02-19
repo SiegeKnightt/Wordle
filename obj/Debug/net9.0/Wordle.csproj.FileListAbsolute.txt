@@ -12,3 +12,4 @@ C:\Users\ReevesFarrell\Desktop\Repos\.NET Training\Wordle\obj\Debug\net9.0\refin
 C:\Users\ReevesFarrell\Desktop\Repos\.NET Training\Wordle\obj\Debug\net9.0\Wordle.pdb
 C:\Users\ReevesFarrell\Desktop\Repos\.NET Training\Wordle\obj\Debug\net9.0\Wordle.genruntimeconfig.cache
 C:\Users\ReevesFarrell\Desktop\Repos\.NET Training\Wordle\obj\Debug\net9.0\ref\Wordle.dll
+C:\Users\ReevesFarrell\Desktop\Repos\.NET Training\Wordle\obj\Debug\net9.0\Wordle.sourcelink.json
