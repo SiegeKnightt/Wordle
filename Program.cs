@@ -31,13 +31,17 @@
         // If all letters match, end the game with a win
         static void Main() {
 
+            bool game = true;
+            int attempt = 0;
+            string winningWord = "";
+            string[] words = ["", "", "", "", "", ""];
+
             Console.WriteLine("Welcome to Wordle!");
             Console.WriteLine();
 
-            bool game = true;
-            int attempt = 0;
-            string winningWord = "WINER";
-            string[] words = ["", "", "", "", "", ""];
+            string[]allLines = File.ReadAllLines(".\\wordList.txt");
+            Random r = new Random();
+            winningWord = allLines[r.Next(allLines.Length)];
 
             while (game) {
 
