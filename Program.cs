@@ -35,15 +35,22 @@
             Console.WriteLine();
 
             bool win = false;
+            bool game = true;
             int attempt = 0;
             string winningWord = "WINER";
             string[] words = ["", "", "", "", "", ""];
 
-            while (!win) {
+            while (game) {
 
-                Console.WriteLine("Type in a 5 letter word to guess: ");
+                string word = "";
+                
+                while (word.Length != 5) {
 
-                string word = Console.ReadLine() ?? "";
+                    Console.WriteLine("Type in a 5 letter word to guess: ");
+
+                    word = Console.ReadLine() ?? "";
+                }
+
                 words[attempt] = word.ToUpper();
 
                 Program.printBoard(words, attempt);
@@ -54,11 +61,18 @@
                     Console.WriteLine("The word was: " + winningWord);
 
                     win = true;
+                    game = false;
+                }
+                
+                if (attempt == 5) {
+
+                    Console.WriteLine("You Lose!");
+                    Console.WriteLine("The word was: " + winningWord);
+
+                    game = false;
                 }
 
                 attempt++;
-
-                // win = true;
             }   
         }
 
