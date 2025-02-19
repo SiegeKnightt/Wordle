@@ -34,7 +34,6 @@
             Console.WriteLine("Welcome to Wordle!");
             Console.WriteLine();
 
-            bool win = false;
             bool game = true;
             int attempt = 0;
             string winningWord = "WINER";
@@ -60,7 +59,6 @@
                     Console.WriteLine("Y   O   U   W   I   N\n");
                     Console.WriteLine("The word was: " + winningWord);
 
-                    win = true;
                     game = false;
                 }
                 
