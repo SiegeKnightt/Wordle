@@ -52,7 +52,7 @@
 
                 words[attempt] = word.ToUpper();
 
-                Program.printBoard(words, attempt);
+                Program.printBoard(words, winningWord, attempt);
 
                 if (words[attempt] == winningWord) {
 
@@ -74,7 +74,7 @@
             }   
         }
 
-        static void printBoard(string[] words, int attempt) {
+        static void printBoard(string[] words, string winningWord, int attempt) {
 
             for (int row = 0; row < 6; row++) {
 
@@ -82,8 +82,37 @@
                 Console.WriteLine("|   |   |   |   |   |");
 
                 if (words[row] != string.Empty) {
+                    
+                    Console.Write("| ");
 
-                    Console.WriteLine("| " + words[row][0] + " | " + words[row][1] + " | " + words[row][2] + " | " + words[row][3] + " | " + words[row][4] + " |");
+                    for (int i = 0; i < 5; i++) {
+
+                        for (int j = 0; j < 5; j++) {
+
+                            if (winningWord[j] == words[row][i]) {
+
+                                Console.ForegroundColor = ConsoleColor.Yellow;
+                            }
+                        }
+
+                        if (words[row][i] == winningWord[i]) {
+
+                            Console.ForegroundColor = ConsoleColor.Green;
+                        }
+
+                        Console.Write(words[row][i]);
+                        
+                        Console.ResetColor();
+
+                        if (i != 4) {
+
+                            Console.Write(" | ");
+                        }
+                    }
+
+                    Console.Write(" |\n");
+                    //Console.BackgroundColor = ConsoleColor.Green;
+                    //Console.WriteLine("| " + words[row][0] + " | " + words[row][1] + " | " + words[row][2] + " | " + words[row][3] + " | " + words[row][4] + " |");
                 }
                 else {
 
