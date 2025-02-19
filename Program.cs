@@ -111,8 +111,6 @@
                     }
 
                     Console.Write(" |\n");
-                    //Console.BackgroundColor = ConsoleColor.Green;
-                    //Console.WriteLine("| " + words[row][0] + " | " + words[row][1] + " | " + words[row][2] + " | " + words[row][3] + " | " + words[row][4] + " |");
                 }
                 else {
 
